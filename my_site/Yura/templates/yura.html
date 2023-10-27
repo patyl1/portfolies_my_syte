@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Yura</title>
+</head>
+<body>
+    <main class="container">
+        <h1><a href="/Ihor/highlites/">Highlites</a></h1>
+        <table class="table mt-5 table-bordered table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Minutes played</th>
+                <th>Total actions/successful</th>
+                <th>Passes/accurate</th>
+                <th>Long passes/accurate</th>
+                <th>Duels/won</th>
+                <th>Aerial duels/won</th>
+                <th>Losses/own half</th>
+                <th>Recoveries/ opp.half</th>
+                <th>Yellow card </th>
+                <th>Red card</th>
+            
+            </tr>
+        </thead>
+        <tbody>
+            {% for statistic in statistics %}
+            <tr>
+                <td>
+                    <a>{{ statistic.minute_play }}</a>
+                </td>
+                <td>{{ statistic.total_actions}}/{{ statistic.successful }}%</td>
+                <td>{{ statistic.passes }}/{{ statistic.accurate }}%</td>
+                <td>{{ statistic.long_passes }}/{{ statistic.accurate_l }}%% </td>
+                <td>{{statistic.duels }}/{{ statistic.won_d }}%</td>
+                <td>{{ statistic.aeriels_duels }}/{{ statistic.won_a }}%</td>
+                <td>{{ statistic.losses }}/{{ statistic.own_half }}%</td>
+                <td>{{ statistic.recoviers }}/{{ statistic.opp_half }}%</td>
+                <td>{{ statistic.yellow_card }}</td>
+                <td>{{ statistic.red_card }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>  
+            <a href="https://docs.google.com/spreadsheets/d/1-B8cmqYK-haQKyAdGimBx6SG2xtVZwLJ/edit#gid=1609784322">All statistic from WyScout</a>
+        </table>
+        
+</html>

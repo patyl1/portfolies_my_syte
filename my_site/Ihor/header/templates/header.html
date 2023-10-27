@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet"  type="text/css"  href="{% static "/css/styles.css"  %}">
+    <title>Portfolies</title>
+    <style>
+        
+        h1 {
+            color: #FFFFFF; 
+        }
+        h2 {
+            color: #FFFFFF; 
+        }
+        h3 {
+            color: #FFFFFF; 
+        }
+        a {
+            color: #FFFFFF;
+        }
+        
+        body {
+            background-image: url("{% static 'background.jpg' %}");
+            background-size: cover; /* Подгоняет изображение под размер окна браузера */
+            background-repeat: no-repeat; /* Запрещает повторение изображения */
+            background-attachment: fixed; /* Фиксирует изображение при прокрутке */
+            /* Другие стили по вашему усмотрению */
+        }
+        
+        .team {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 100px;
+        }
+        .team img {
+            height: 150px; /* Измените на желаемую ширину */
+        }
+        .team img {
+            height: auto;
+        }
+        .ihor img {
+            width: 320px;
+        }
+        .yura img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1 class="header-h1-center">Portfolies</h1>
+        <div class="team">
+            <div class="ihor">
+            <img src="{% static 'Ihor.jpg' %}" alt="Описание изображения">
+            <h2><a href="/Ihor/">Golkeeper</a></h2>
+            <a href="https://www.transfermarkt.world/igor-potimkov/profil/spieler/1048954"> Ihor Potimkov</a>
+            <h3><a href="https://instagram.com/paty_l1?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">@paty_1l</a></h3>
+                <table class="table">
+                    <thead class="table-dark">
+                    <tr>
+                        <th>Title</th>
+                        <th>Seasons</th>
+                        <th>Matches</th>
+                       
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Avangard Kh.</td>
+                            <td>2020-2021</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Metalist 1925 U-19</td>
+                            <td>2021-2023</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>Metalist 1925 </td>
+                            <td>2021-</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="yura">
+            <img src="{% static 'yura.jpg' %}" alt="Описание изображения">
+            <h2><a href="/Yura/">Defender</a></h2>
+            <a href="https://www.transfermarkt.world/yuriy-potimkov/profil/spieler/951690">Yuriy Potimkov</a>
+            <h3><a href="https://instagram.com/potimkov_official_?igshid=OGQ5ZDc2ODk2ZA==">@potimkov_official_</a></h3>
+            
+                    <table class="table">
+                    <thead class="table-dark">
+                <tr>
+                    <th>Title</th>
+                    <th>Seasons</th>
+                    <th>Matches</th>
+                    
+                </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Avangard Kh.</td>
+                            <td>2019-2021</td>
+                            <td>105</td>
+                        </tr>
+                        <tr>
+                            <td>Metalist 1925 U-19</td>
+                            <td>2021-2022</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>Metalist 1925 </td>
+                            <td>2021-</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Nyva Buzova </td>
+                            <td>2023-</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+</body>
+</html>
